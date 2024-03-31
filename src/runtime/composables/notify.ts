@@ -71,6 +71,7 @@ const notify: NotifyFn & Partial<Notify> & { _context: AppContext | null } =
     const preDuration: number = options.message
       ? options.message?.length * 90
       : 7000
+
     const props: Partial<NotificationProps> = {
       title: options.title,
       message: options.message,
@@ -81,7 +82,12 @@ const notify: NotifyFn & Partial<Notify> & { _context: AppContext | null } =
       onClose: () => {
         close(id, position, options?.onClose)
       },
-      duration: preDuration < 4000 ? 4000 : preDuration,
+      duration:
+        typeof options.duration === 'undefined'
+          ? preDuration < 4000
+            ? 4000
+            : preDuration
+          : options.duration,
     }
 
     const appendTo: HTMLElement | null = document.body

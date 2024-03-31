@@ -41,6 +41,21 @@ export default defineNuxtConfig({
 </template>
 ```
 
+
+# 🔨 API
+## Options
+
+
+ **Name** | **Description** | **Type** | **Default** 
+------|------|------|------
+title | title |string|''
+message | description text |string|''
+offset |offset from the top edge of the screen. <br /> Every Notification instance of the same moment <br /> should have the same offset|      |      
+position |custom position|[enum](https://skillbox.ru/media/ "'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left'")|top-right
+duration |duration before close.  <br /> It will not automatically close if set 0|number|4000
+type|notification type|[enum](https://skillbox.ru/media/ "'success' \| 'warning' \| 'info' \| 'error' \| ''")|''
+
+
 ## 💻 Development
 
 - Fork and clone [Azirafel17/nuxt3-notification](https://github.com/Azirafel17/nuxt3-notification-module)

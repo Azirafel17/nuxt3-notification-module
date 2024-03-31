@@ -47,8 +47,8 @@ const message = computed(
     }
   }
 )
-const info = () => $notify.info({ ...message.value })
-const success = () => $notify.success({ ...message.value })
+const info = () => $notify.info({ ...message.value, duration: 0 })
+const success = () => $notify.success({ ...message.value, duration: 3000 })
 const warning = () => $notify.warning({ ...message.value })
 const error = () => $notify.error({ ...message.value })
 </script>

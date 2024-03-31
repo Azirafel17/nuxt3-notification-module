@@ -1,6 +1,17 @@
 <template>
-  <transition name="fade" @before-leave="onClose" @after-leave="$emit('destroy')">
-    <div v-show="visible" :id="id" class="notification" :class="[type]" :style="positionStyle" @click="close">
+  <transition
+    name="fade"
+    @before-leave="onClose"
+    @after-leave="$emit('destroy')"
+  >
+    <div
+      v-show="visible"
+      :id="id"
+      class="notification"
+      :class="[type]"
+      :style="positionStyle"
+      @click="close"
+    >
       <h2 :class="'title'" v-text="title" />
       <div v-show="message" :style="!!title ? undefined : { margin: 0 }">
         {{ message }}
@@ -43,11 +54,11 @@ const positionStyle = computed<CSSProperties>(() => {
   }
 })
 
-let timer: (() => void) | undefined = undefined
+let timer: (() => void) | undefined
 
 function startTimer() {
   if (props.duration > 0) {
-    ; ({ stop: timer } = useTimeoutFn(() => {
+    ;({ stop: timer } = useTimeoutFn(() => {
       if (visible.value) close()
     }, props.duration))
   }
