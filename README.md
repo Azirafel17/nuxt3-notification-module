@@ -62,7 +62,7 @@ export default defineNuxtConfig({
 
 ## 💻 Development
 
-- Fork and clone [Azirafel17/nuxt3-notification](https://github.com/Azirafel17/nuxt3-notification-module)
+- Fork and clone [Azirafel17/nuxt3-notification-module](https://github.com/Azirafel17/nuxt3-notification-module)
 - Install dependencies using `npm install`
 - Run `npm dev:prepare` to generate type stubs.
 - Use `npm dev` to start [playground](https://github.com/Azirafel17/nuxt3-notification-module/tree/main/playground) in
