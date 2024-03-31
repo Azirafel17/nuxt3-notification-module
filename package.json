@@ -1,8 +1,8 @@
 {
   "name": "aak-nuxt3-notifications",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Adds a notification feature to the Nuxt3 app",
-  "repository": "https://github.com/Azirafel17/nuxt3-notification",
+  "repository": "https://github.com/Azirafel17/nuxt3-notification-module",
   "author": {
     "name": "Amir Almukhametov",
     "email": "amir.a@list.ru"
