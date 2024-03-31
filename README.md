@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 ```
 
 ## 🚀 Example
-
+![Example](https://github.com/Azirafel17/nuxt3-notification-module/blob/main/assets/example.gif)
 
 ```html
 <!-- component.vue -->
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   <button @click="info">Show notify info</button>
 </template>
 ```
-
+![Example](https://github.com/Azirafel17/nuxt3-notification-module/blob/main/assets/writeCode.gif)
 
 # 🔨 API
 ## Options
