@@ -50,10 +50,10 @@ export default defineNuxtConfig({
 ------|------|------|------
 title | title |string|''
 message | description text |string|''
-offset |offset from the top edge of the screen. <br /> Every Notification instance of the same moment <br /> should have the same offset|      |      
-position |custom position|[enum](https://skillbox.ru/media/ "'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left'")|top-right
+offset |offset from the top edge of the screen. <br /> Every Notification instance of the same moment <br /> should have the same offset| number |      0
+position |custom position|'top-right'  <br />'top-left' <br /> 'bottom-right'  <br />'bottom-left'"|top-right
 duration |duration before close.  <br /> It will not automatically close if set 0|number|4000
-type|notification type|[enum](https://skillbox.ru/media/ "'success' \| 'warning' \| 'info' \| 'error' \| ''")|''
+type|notification type| 'success' <br /> 'warning' <br /> 'info' <br /> 'error' <br /> ''|''
 
 
 ## 💻 Development
