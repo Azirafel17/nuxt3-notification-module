@@ -39,7 +39,9 @@ export interface NotificationHandle {
   close: () => void
 }
 
-export type NotifyFn = (options?: NotificationProps) => NotificationHandle
+export type NotifyFn = (
+  options?: NotificationProps | string
+) => NotificationHandle
 
 export interface Notify extends NotifyFn {
   success: NotifyFn
@@ -52,15 +54,16 @@ let countIdx = 1
 const offset = 16
 
 const notify: NotifyFn & Partial<Notify> & { _context: AppContext | null } =
-  function (options = {}, context: AppContext | null = null) {
-    if (typeof options.message !== 'string') return { close: () => undefined }
-    if (typeof options === 'string') {
-      options = { message: options }
+  function (_options = {}, context: AppContext | null = null) {
+    let options: NotificationProps = {}
+    if (typeof _options === 'string') {
+      options.message = _options
+    } else {
+      options = { ..._options }
     }
-
+    if (typeof options.message !== 'string') return { close: () => undefined }
     let verticalOffset = options.offset || 0
     const position: Position = options.position || 'top-right'
-
     notifications[position].forEach(({ vm }) => {
       verticalOffset += vm.el?.offsetHeight || 0
       if (vm.el?.offsetHeight) verticalOffset += offset
