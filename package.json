@@ -1,6 +1,6 @@
 {
   "name": "aak-nuxt3-notifications",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Adds a notification feature to the Nuxt3 app",
   "repository": {
     "type": "git",
