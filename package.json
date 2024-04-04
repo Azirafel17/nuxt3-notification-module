@@ -1,6 +1,6 @@
 {
   "name": "aak-nuxt3-notifications",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Adds a notification feature to the Nuxt3 app",
   "repository": {
     "type": "git",
@@ -41,7 +41,8 @@
     "changelogen": "changelogen --release",
     "lint": "eslint ."
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "@nuxt/kit": "^3.9.3",
     "@vueuse/core": "^10.7.2"
   },
