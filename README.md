@@ -17,6 +17,7 @@ This is module [aak-nuxt3-notifications](https://github.com/Azirafel17/nuxt3-not
 
 ```bash
 npm i aak-nuxt3-notifications # npm
+
 yarn add aak-nuxt3-notifications # yarn
 ```
 
@@ -24,7 +25,9 @@ yarn add aak-nuxt3-notifications # yarn
 
 ```ts
 export default defineNuxtConfig({
-  modules: ['aak-nuxt3-notifications'],
+  modules: [
+    'aak-nuxt3-notifications',
+  ],
 })
 ```
 
@@ -37,11 +40,29 @@ export default defineNuxtConfig({
 
 <script setup>
   const { $notify } = useNuxtApp()
-  const info = () => $notify.info({ ...message.value })
+
+  const acceptsAnObject = () => $notify.info({ 
+                                    title: 'Title message', 
+                                    message: 'Text message', 
+                                    position: 'bottom-right',
+                                    duration: 8000
+                                  })
+  // ‎‧₊˚✧[Only text]✧˚₊‧
+  const onlyText = () => $notify.info('You can only specify the text') 
+
+  const info = () => $notify.info('An info-style message') // 💬
+  const success = () => $notify.success('An success-style message') // ✅
+  const warning = () => $notify.warning('An warning-style message') // ⚠️
+  const error = () => $notify.error('An error-style message') // ❗
 </script>
 
 <template>
+  <button @click="acceptsAnObject">Show notify acceptsAnObject</button>
+  <button @click="onlyText">Show notify onlyText</button>
   <button @click="info">Show notify info</button>
+  <button @click="success">Show notify success</button>
+  <button @click="warning">Show notify warning</button>
+  <button @click="error">Show notify error</button>
 </template>
 ```
 
@@ -57,7 +78,7 @@ export default defineNuxtConfig({
 | message  | description text                                                                                                                 | string                                                                  | ''          |
 | offset   | offset from the top edge of the screen. <br /> Every Notification instance of the same moment <br /> should have the same offset | number                                                                  | 0           |
 | position | custom position                                                                                                                  | 'top-right' <br />'top-left' <br /> 'bottom-right' <br />'bottom-left'" | top-right   |
-| duration | duration before close. <br /> It will not automatically close if set 0                                                           | number                                                                  | 4000        |
+| duration | duration before close. <br /> It will not automatically close if set 0                                                           | number </br> undefined                                                                  | duration is calculated based </br>on the number of characters </br>in a string, but not less than </br>4000, and if </br>duration === undefined, </br>then duration 4000        |
 | type     | notification type                                                                                                                | 'success' <br /> 'warning' <br /> 'info' <br /> 'error' <br /> ''       | ''          |
 
 ## 💻 Development
