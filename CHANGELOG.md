@@ -1,4 +1,16 @@
 
+## v1.0.9
+
+[compare changes](https://github.com/Azirafel17/nuxt3-notification-module/compare/v1.0.8...v1.0.9)
+
+### 🏡 Chore
+
+- **release:** V1.0.8 ([e4dd6c9](https://github.com/Azirafel17/nuxt3-notification-module/commit/e4dd6c9))
+
+### ❤️ Contributors
+
+- Amir <amir.a@list.ru>
+
 ## v1.0.8
 
 [compare changes](https://github.com/Azirafel17/nuxt3-notification-module/compare/v1.0.7...v1.0.8)
